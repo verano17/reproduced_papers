@@ -1,0 +1,24 @@
+{
+  "description": "Phase 5 control B4 (paper protocol, arm A): basis-enhanced 2-gram model restricted to real orthogonal unitaries, otherwise identical to e5_fig7_spect_pooled_original.json (same Riemannian momentum optimiser, paper alpha, epochs, minibatch, split). Isolates complex phases (paper Sec. VI, p15). Sweep --bond-dim 1..12 and --seed 0..9.",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "spect_heart",
+    "split_seed": 0,
+    "test_fraction": 0.25,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "basis_enhanced",
+    "bond_dim": 2,
+    "field": "real"
+  },
+  "training": {
+    "epochs": 150,
+    "lr": 0.01,
+    "momentum": 0.5,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0
+  }
+}

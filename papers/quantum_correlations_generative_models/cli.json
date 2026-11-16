@@ -1,0 +1,125 @@
+{
+  "description": "Enhancing Generative Models via Quantum Correlations (Gao et al., PRX 12, 021037, 2022) reproduction runner",
+  "arguments": [
+    {
+      "flags": [
+        "--epochs"
+      ],
+      "help": "Override the number of training epochs (basis-enhanced model)",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "training.epochs"
+      }
+    },
+    {
+      "flags": [
+        "--batch-size"
+      ],
+      "help": "Override the minibatch size",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "dataset.batch_size"
+      }
+    },
+    {
+      "flags": [
+        "--lr"
+      ],
+      "help": "Override the learning rate alpha of Eqs. 23-26",
+      "type": "float",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "training.lr"
+      }
+    },
+    {
+      "flags": [
+        "--bond-dim"
+      ],
+      "help": "Override the bond dimension h (hidden states of the HMM, top-wire dimension of the basis-enhanced model)",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "model.bond_dim"
+      }
+    },
+    {
+      "flags": [
+        "--em-iterations"
+      ],
+      "help": "Override the Baum-Welch iteration cap (classical HMM)",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "training.em_iterations"
+      }
+    },
+    {
+      "flags": [
+        "--pseudo-count"
+      ],
+      "help": "Override the Baum-Welch pseudo-count added to every expected count (classical HMM; Phase 5 tuning)",
+      "type": "float",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "training.pseudo_count"
+      }
+    },
+    {
+      "flags": [
+        "--smoothing"
+      ],
+      "help": "Override the add-alpha smoothing of the k-gram counting model (Phase 5 control B5)",
+      "type": "float",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "training.smoothing"
+      }
+    },
+    {
+      "flags": [
+        "--order"
+      ],
+      "help": "Override the order k of the k-gram counting model (Phase 5 control B5)",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "model.order"
+      }
+    },
+    {
+      "flags": [
+        "--checkpoint"
+      ],
+      "help": "Checkpoint reported as the run result: 'final' or 'best_validation' (Phase 5 arm B)",
+      "type": "str",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "evaluation.checkpoint"
+      }
+    },
+    {
+      "flags": [
+        "--sweep-id"
+      ],
+      "help": "Sweep identifier recorded in run_status.json (set by utils/run_sweep.py)",
+      "type": "str",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "sweep_id"
+      }
+    }
+  ]
+}

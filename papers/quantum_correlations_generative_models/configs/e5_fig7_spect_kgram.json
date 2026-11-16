@@ -1,0 +1,26 @@
+{
+  "description": "Phase 5 reference B5 (paper protocol, arm A): translation-invariant k-gram counting model on the split of e5_fig7_spect_classical.json (bond_dim unused, set to 0). The finals sweep passes --order and the smoothing selected in arm B.",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "spect_heart",
+    "split_seed": 0,
+    "test_fraction": null,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "kgram_counting",
+    "bond_dim": 0,
+    "field": "real",
+    "order": 1
+  },
+  "training": {
+    "epochs": 0,
+    "lr": 0.0,
+    "momentum": 0.0,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0,
+    "smoothing": 0.5
+  }
+}

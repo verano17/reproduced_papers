@@ -1,0 +1,14 @@
+{
+  "description": "Smoke overlay for the Phase 4 MerLin adaptation (not the paper's model): photonic quantum HMM on SPECT Heart, h=2, 1 epoch, Adam lr 0.01.",
+  "model": {
+    "kind": "photonic_merlin",
+    "bond_dim": 2,
+    "field": "complex"
+  },
+  "training": {
+    "epochs": 1,
+    "lr": 0.01,
+    "optimizer": "adam",
+    "momentum": 0.0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "description": "Phase 4 MerLin ADAPTATION (not the paper's model): heralded two-photon photonic quantum HMM (lib/photonic_hmm_merlin.py, LOG.md Phase 4 Adaptation Plan) on the same data, split and protocol as configs/e5_fig7_spect_pooled_original.json: 150 epochs, minibatch 8, Adam lr 0.01 (fixed, not tuned). FOCK space, 2 photons, h + M modes. Sweep --bond-dim 1..12 and --seed 0..9.",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "spect_heart",
+    "split_seed": 0,
+    "test_fraction": 0.25,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "photonic_merlin",
+    "bond_dim": 2,
+    "field": "complex"
+  },
+  "training": {
+    "epochs": 150,
+    "lr": 0.01,
+    "optimizer": "adam",
+    "momentum": 0.0,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0
+  }
+}

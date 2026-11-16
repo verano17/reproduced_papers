@@ -1,0 +1,24 @@
+{
+  "description": "E5 paper baseline (Fig. 7, p14; Sec. V B, p13): translation-invariant classical HMM trained by Baum-Welch on spect_heart (n=23, M=2), same split as the _original config. EM iteration cap and tolerance are not stated in the paper (R3): 2000 iterations or relative NLL change <= 1e-8 (cap fixed in Phase 3 from a convergence check at h=12: changes beyond 2000 iterations <= 6e-4 bits/site). Sweep --bond-dim 1..12 and --seed 0..9.",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "spect_heart",
+    "split_seed": 0,
+    "test_fraction": null,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "hmm_baum_welch",
+    "bond_dim": 2,
+    "field": "real"
+  },
+  "training": {
+    "epochs": 0,
+    "lr": 0.0,
+    "momentum": 0.0,
+    "em_iterations": 2000,
+    "em_tolerance": 1e-08,
+    "pseudo_count": 0.0
+  }
+}

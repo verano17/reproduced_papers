@@ -1,0 +1,24 @@
+{
+  "description": "E5 SPECT split-sensitivity arm (LOG.md R6): identical to configs/e5_fig7_spect_original.json except that SPECT.train and SPECT.test are pooled (267 rows) and a quarter (66 rows, split_seed 0) is held out for testing (N_train = 201). The paper's text names the standard SPECT test set (p13), but its h = 1 point (Fig. 7e,f) and its Fig. 8 threshold (N_train = 200) match this pooled split. Not the as-stated paper protocol.",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "spect_heart",
+    "split_seed": 0,
+    "test_fraction": 0.25,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "basis_enhanced",
+    "bond_dim": 2,
+    "field": "complex"
+  },
+  "training": {
+    "epochs": 150,
+    "lr": 0.01,
+    "momentum": 0.5,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0
+  }
+}

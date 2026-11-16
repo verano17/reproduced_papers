@@ -1,0 +1,14 @@
+# Dependencies for quantum_correlations_generative_models.
+# numpy / scipy / torch: models, exact simulations, likelihood-ratio quantiles.
+# matplotlib: figures in utils/ and notebook.ipynb; pandas: notebook tables.
+# merlinquantum (tested with 0.4.1) and perceval-quandela: the Phase 4 MerLin
+# adaptation (lib/photonic_hmm_merlin.py); also imported by the shared
+# runtime banner (runtime_lib/runtime.py).
+numpy
+scipy
+torch
+matplotlib
+pandas
+perceval-quandela
+merlinquantum
+pytest

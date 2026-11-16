@@ -1,0 +1,6 @@
+{
+  "description": "Smoke overlay: basis-enhanced model on SPECT Heart, h=2, 1 epoch.",
+  "training": {
+    "epochs": 1
+  }
+}

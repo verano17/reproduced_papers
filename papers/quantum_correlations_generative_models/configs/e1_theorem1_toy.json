@@ -1,0 +1,17 @@
+{
+  "description": "E1 + E3 (Theorem 1, Sec. IV B, Fig. 2a p4, Eqs. 4-6 p7-8; App. F p23): exact distribution of the cluster-state basis-enhanced 2-gram model, Eq. 4/5 check, exhaustive local-hidden-variable support check, maximum-likelihood k-gram fits and the 6-state HMM of App. F. Evaluation only.",
+  "experiment": "theorem1_toy",
+  "theorem1": {
+    "num_pairs": [
+      5,
+      7,
+      9
+    ],
+    "statevector_check_pairs": 5,
+    "chosen_pairs": [
+      0,
+      2,
+      4
+    ]
+  }
+}

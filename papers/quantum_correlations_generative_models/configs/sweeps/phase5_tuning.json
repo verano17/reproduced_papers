@@ -1,0 +1,177 @@
+{
+  "description": "Phase 5 arm B tuning (LOG.md, Phase 5 Comparison Plan): 20% validation carve-out, best-validation checkpoint; BE, B4, B2 lr grid; Baum-Welch pseudo-count grid; k-gram order x smoothing grid; h in {4, 8, 12}, seeds 0-2; 588 runs.",
+  "blocks": [
+    {
+      "datasets": [
+        "biofam",
+        "promoter_gene_sequences",
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced",
+        "basis_enhanced_real",
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        4,
+        8,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "grid": {
+        "lr": [
+          0.001,
+          0.003,
+          0.01,
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam",
+        "promoter_gene_sequences",
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        4,
+        8,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "grid": {
+        "pseudo_count": [
+          0.0,
+          0.001,
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam",
+        "promoter_gene_sequences",
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1,
+          2,
+          3
+        ],
+        "smoothing": [
+          0.01,
+          0.1,
+          0.5,
+          1.0
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "basis_enhanced",
+        "basis_enhanced_real",
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        4,
+        8,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "grid": {
+        "lr": [
+          0.001,
+          0.003,
+          0.01,
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        4,
+        8,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "grid": {
+        "pseudo_count": [
+          0.0,
+          0.001,
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1,
+          2,
+          3
+        ],
+        "smoothing": [
+          0.01,
+          0.1,
+          0.5,
+          1.0
+        ]
+      }
+    }
+  ]
+}

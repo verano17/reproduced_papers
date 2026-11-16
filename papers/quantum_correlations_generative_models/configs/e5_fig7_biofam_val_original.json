@@ -1,0 +1,27 @@
+{
+  "description": "Phase 5 arm B tuning base: basis-enhanced 2-gram model (paper model) on biofam with 20% of the training pool held out as validation (split seed 0, test set unchanged) and the best-validation checkpoint. Tuned values are passed by the tuning sweep (--lr, --pseudo-count, --smoothing, --order); the values here are the paper defaults used as tie-breakers.",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "biofam",
+    "split_seed": 0,
+    "test_fraction": 0.25,
+    "validation_fraction": 0.2,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "basis_enhanced",
+    "bond_dim": 2,
+    "field": "complex"
+  },
+  "training": {
+    "epochs": 75,
+    "lr": 0.001,
+    "momentum": 0.5,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0
+  },
+  "evaluation": {
+    "checkpoint": "best_validation"
+  }
+}

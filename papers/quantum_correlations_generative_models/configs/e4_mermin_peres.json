@@ -1,0 +1,11 @@
+{
+  "description": "E4 (Sec. IV C, Table I p10, Eqs. 11-14 p9-10, Lemma 1 Eq. 17, App. D p20-21): Mermin-Peres square relations, the no-common-hidden-variable argument for the Eq. 11 states, and stabilizer-state counts for n = 1..3. Evaluation only.",
+  "experiment": "mermin_peres",
+  "mermin_peres": {
+    "count_qubits": [
+      1,
+      2,
+      3
+    ]
+  }
+}

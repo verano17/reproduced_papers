@@ -1,0 +1,1651 @@
+{
+  "description": "Phase 5 finals (LOG.md, Phase 5 Comparison Plan): arm B (validation-tuned, best-validation checkpoint) BE, B4, B2, B1 + B3, B5 with the values selected by utils/select_hyperparameters.py from phase5_tuning_20261113-124847; arm A (paper protocol) B2 at the arm-B lr, B4 at the paper alpha, B3 at the parameter-matched sizes, B5 at the arm-B smoothing.",
+  "blocks": [
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.003
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "pseudo_count": [
+          0.0
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.1
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.1
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.1
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.1
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "biofam"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        17,
+        19,
+        21,
+        24,
+        26
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "pseudo_count": [
+          0.0
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "promoter_gene_sequences"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        13,
+        14,
+        15,
+        17,
+        19,
+        21,
+        24,
+        26
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        19,
+        21
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "pseudo_count": [
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        13,
+        14,
+        16,
+        17,
+        19,
+        21
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "basis_enhanced"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        19,
+        21
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "pseudo_count": [
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          1
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          3
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled",
+      "model_kinds": [
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {
+        "lr": [
+          0.03
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        13,
+        14,
+        16,
+        17,
+        19,
+        21
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "grid": {}
+    }
+  ]
+}

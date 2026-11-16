@@ -1,0 +1,22 @@
+{
+  "description": "E2 (App. E, Eqs. E1-E12, Lemmas 4-6, p21-22): exact checks of the S3 random walk (Eq. E4, E5), the GHZ-type probability (Lemma 4) and local-strategy bound (Lemma 6), and the l1 distance of maximum-likelihood k-gram fits for n = 3 + 4k pairs (n = 7, 11). Evaluation only.",
+  "experiment": "robust_l1",
+  "robust_l1": {
+    "walk_steps": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "num_pairs": [
+      7,
+      11
+    ],
+    "kgram_orders": [
+      1,
+      2,
+      3
+    ]
+  }
+}

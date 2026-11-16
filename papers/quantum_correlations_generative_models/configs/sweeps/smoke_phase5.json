@@ -1,0 +1,93 @@
+{
+  "description": "Phase 5 smoke sweep: every new model label on the SPECT validation variants, h = 2, seed 0, 1 epoch / 3 EM iterations. Infrastructure check only, not evidence.",
+  "blocks": [
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "basis_enhanced",
+        "basis_enhanced_real",
+        "hmm_gradient"
+      ],
+      "bond_dims": [
+        2
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "epochs": [
+          1
+        ],
+        "lr": [
+          0.01
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_pooled_val",
+      "model_kinds": [
+        "hmm_baum_welch"
+      ],
+      "bond_dims": [
+        2
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "em_iterations": [
+          3
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "_val",
+      "model_kinds": [
+        "kgram_counting"
+      ],
+      "bond_dims": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "order": [
+          2
+        ],
+        "smoothing": [
+          0.5
+        ]
+      }
+    },
+    {
+      "datasets": [
+        "spect_heart"
+      ],
+      "config_variant": "",
+      "model_kinds": [
+        "basis_enhanced_real"
+      ],
+      "bond_dims": [
+        2
+      ],
+      "seeds": [
+        0
+      ],
+      "grid": {
+        "epochs": [
+          1
+        ]
+      }
+    }
+  ]
+}

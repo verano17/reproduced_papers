@@ -1,0 +1,34 @@
+{
+  "description": "Lightweight runnable default: basis-enhanced 2-gram model (Fig. 6a, p12) on SPECT Heart at bond dimension h=2 for 2 epochs. Not a paper setting; use the e*_ configs for experiments.",
+  "experiment": "sequence_model",
+  "seed": 0,
+  "dtype": "float64",
+  "outdir": "outdir",
+  "device": "cpu",
+  "dataset": {
+    "name": "spect_heart",
+    "split_seed": 0,
+    "test_fraction": null,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "basis_enhanced",
+    "bond_dim": 2,
+    "field": "complex"
+  },
+  "training": {
+    "epochs": 2,
+    "lr": 0.01,
+    "momentum": 0.5,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0
+  },
+  "evaluation": {
+    "checkpoint": "final"
+  },
+  "logging": {
+    "level": "info"
+  }
+}

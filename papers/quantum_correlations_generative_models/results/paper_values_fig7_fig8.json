@@ -1,0 +1,25 @@
+{
+  "_source": "Values read by eye from 300-dpi crops of PRX 12, 021037 (2022), p14 (Fig. 7 and Fig. 8), 2026-11-12. Approximate plot readings, not published numbers. Precision about +-0.002 (Promoters), +-0.003 (SPECT), +-0.02 (biofam) bits per site for Fig. 7, +-0.03 bits for Fig. 8. Metric: the paper's plotted 'KL divergence', calibrated in Phase 3 as NLL - log2(N)/n (LOG.md R1).",
+  "fig7_best_of_ten": {
+    "biofam": {
+      "train": {"hmm_baum_welch": {"1": 1.40, "4": 0.16, "8": -0.06, "12": -0.06}, "basis_enhanced": {"1": 1.40, "4": 0.13, "8": -0.04, "12": -0.05}},
+      "test": {"hmm_baum_welch": {"1": 1.44, "4": 0.21, "8": 0.00, "12": 0.00}, "basis_enhanced": {"1": 1.44, "4": 0.18, "8": 0.02, "12": 0.00}}
+    },
+    "promoter_gene_sequences": {
+      "train": {"hmm_baum_welch": {"1": 1.885, "4": 1.875, "8": 1.863, "12": 1.858}, "basis_enhanced": {"1": 1.887, "4": 1.847, "8": 1.827, "12": 1.816}},
+      "test": {"hmm_baum_welch": {"1": 1.907, "4": 1.897, "8": 1.894, "12": 1.894}, "basis_enhanced": {"1": 1.908, "4": 1.884, "8": 1.878, "12": 1.874}}
+    },
+    "spect_heart": {
+      "train": {"hmm_baum_welch": {"1": 0.581, "4": 0.470, "8": 0.445, "12": 0.451}, "basis_enhanced": {"1": 0.581, "4": 0.456, "8": 0.409, "12": 0.401}},
+      "test": {"hmm_baum_welch": {"1": 0.669, "4": 0.549, "8": 0.534, "12": 0.542}, "basis_enhanced": {"1": 0.667, "4": 0.546, "8": 0.498, "12": 0.493}}
+    }
+  },
+  "fig8_gap_bits_per_sequence": {
+    "promoter_gene_sequences": {"1": -0.08, "2": 0.25, "3": 0.86, "4": 1.59, "5": 1.62, "6": 1.69, "7": 2.15, "8": 2.05, "9": 2.10, "10": 2.53, "11": 2.16, "12": 2.40},
+    "spect_heart": {"1": 0.00, "2": 0.43, "3": 0.20, "4": 0.32, "5": 0.40, "6": 0.56, "7": 0.50, "8": 0.84, "9": 0.67, "10": 0.64, "11": 0.61, "12": 1.14}
+  },
+  "fig8_threshold_bits_per_sequence": {
+    "promoter_gene_sequences": {"2": 0.30, "4": 0.54, "6": 0.85, "8": 1.23, "10": 1.69, "12": 2.22},
+    "spect_heart": {"2": 0.12, "4": 0.21, "6": 0.33, "8": 0.48, "10": 0.67, "12": 0.87}
+  }
+}

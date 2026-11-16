@@ -1,0 +1,9 @@
+{
+  "run_dir": "outdir/sweeps/e5_fig7_20261112-100722/runs/spect_heart_hmm_baum_welch_h12_s8_a1/run_20261112-112824",
+  "dataset": "spect_heart",
+  "bond_dim": 12,
+  "recomputed_train_nll_bits_per_site": 0.6155822193867633,
+  "reported_train_nll_bits_per_site": 0.6155822193867633,
+  "max_abs_log_prob_difference_hmm_vs_embedded": 3.552713678800501e-15,
+  "total_probability_over_all_sequences": 1.0000000000000007
+}

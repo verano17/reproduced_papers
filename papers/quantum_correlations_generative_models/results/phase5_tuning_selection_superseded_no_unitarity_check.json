@@ -1,0 +1,1327 @@
+{
+  "tuning_sweep": "phase5_tuning_20261112-173121",
+  "rule": "Apply the Phase 5 tuning rule to the tuning sweep and write the finals sweep spec.\n\nRule (LOG.md, Phase 5 Comparison Plan and its amendment): per arm and model,\nthe hyperparameter value with the lowest mean validation NLL at the\nbest-validation checkpoint over all its tuning runs (h in {4, 8, 12} x seeds\n0-2; one deterministic run for k-grams, per order k); values within 1e-3 bits\nof that minimum are tied and go to the paper value (lr: the dataset's paper\nalpha; pseudo-count 0; smoothing 0.5), otherwise to the tied value closest to\nit in log scale (the smaller on equal distance, and the smallest when the\npaper value is 0). A value with any FAILED run is ineligible.",
+  "selections": [
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "basis_enhanced",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.001,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.6642234692571127,
+          "observed_mean_validation_nll_bits_per_site": 0.6642234692571127,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.6500361126828138,
+          "observed_mean_validation_nll_bits_per_site": 0.6500361126828138,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.6293658475262318,
+          "observed_mean_validation_nll_bits_per_site": 0.6293658475262318,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": Infinity,
+          "observed_mean_validation_nll_bits_per_site": 0.6254538980688402,
+          "runs": 8,
+          "planned_runs": 9,
+          "eligible": false
+        }
+      ],
+      "tied_values": [
+        0.01
+      ],
+      "selected": 0.01
+    },
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "basis_enhanced_real",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.001,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.6702882604641388,
+          "observed_mean_validation_nll_bits_per_site": 0.6702882604641388,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.64696490654508,
+          "observed_mean_validation_nll_bits_per_site": 0.64696490654508,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.6324605742003488,
+          "observed_mean_validation_nll_bits_per_site": 0.6324605742003488,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": -6.3480017599754515,
+          "observed_mean_validation_nll_bits_per_site": -6.3480017599754515,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "hmm_baum_welch",
+      "order": null,
+      "hyperparameter": "pseudo_count",
+      "paper_value": 0.0,
+      "candidates": [
+        {
+          "value": 0.0,
+          "mean_validation_nll_bits_per_site": 0.7063077259455071,
+          "observed_mean_validation_nll_bits_per_site": 0.7063077259455071,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.70636827183526,
+          "observed_mean_validation_nll_bits_per_site": 0.70636827183526,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7067500473910501,
+          "observed_mean_validation_nll_bits_per_site": 0.7067500473910501,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.0,
+        0.001,
+        0.01
+      ],
+      "selected": 0.0
+    },
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "hmm_gradient",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.001,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.9113876085039103,
+          "observed_mean_validation_nll_bits_per_site": 0.9113876085039103,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.7997001068930132,
+          "observed_mean_validation_nll_bits_per_site": 0.7997001068930132,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7687329820507676,
+          "observed_mean_validation_nll_bits_per_site": 0.7687329820507676,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.7334913235718291,
+          "observed_mean_validation_nll_bits_per_site": 0.7334913235718291,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "kgram_counting",
+      "order": 1,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 2.032054903138823,
+          "observed_mean_validation_nll_bits_per_site": 2.032054903138823,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 2.032052739219232,
+          "observed_mean_validation_nll_bits_per_site": 2.032052739219232,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 2.0320433898380497,
+          "observed_mean_validation_nll_bits_per_site": 2.0320433898380497,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 2.032032308898666,
+          "observed_mean_validation_nll_bits_per_site": 2.032032308898666,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "kgram_counting",
+      "order": 2,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.5631104253624327,
+          "observed_mean_validation_nll_bits_per_site": 0.5631104253624327,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.5634257683207569,
+          "observed_mean_validation_nll_bits_per_site": 0.5634257683207569,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.5648318879640318,
+          "observed_mean_validation_nll_bits_per_site": 0.5648318879640318,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.5665869717509411,
+          "observed_mean_validation_nll_bits_per_site": 0.5665869717509411,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1
+      ],
+      "selected": 0.1
+    },
+    {
+      "dataset": "biofam",
+      "config_variant": "_val",
+      "arm": "biofam",
+      "model": "kgram_counting",
+      "order": 3,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.5599669092780306,
+          "observed_mean_validation_nll_bits_per_site": 0.5599669092780306,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.5584056586711164,
+          "observed_mean_validation_nll_bits_per_site": 0.5584056586711164,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.5611499937188245,
+          "observed_mean_validation_nll_bits_per_site": 0.5611499937188245,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.5654735580206675,
+          "observed_mean_validation_nll_bits_per_site": 0.5654735580206675,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.1
+      ],
+      "selected": 0.1
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "basis_enhanced",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 1.9839202365952557,
+          "observed_mean_validation_nll_bits_per_site": 1.9839202365952557,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 1.9795482121997923,
+          "observed_mean_validation_nll_bits_per_site": 1.9795482121997923,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.9763304048567132,
+          "observed_mean_validation_nll_bits_per_site": 1.9763304048567132,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 1.9732089366383956,
+          "observed_mean_validation_nll_bits_per_site": 1.9732089366383956,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "basis_enhanced_real",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 1.9843553143723756,
+          "observed_mean_validation_nll_bits_per_site": 1.9843553143723756,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 1.9832661558486748,
+          "observed_mean_validation_nll_bits_per_site": 1.9832661558486748,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.9803009483273195,
+          "observed_mean_validation_nll_bits_per_site": 1.9803009483273195,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 1.9775891254240487,
+          "observed_mean_validation_nll_bits_per_site": 1.9775891254240487,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "hmm_baum_welch",
+      "order": null,
+      "hyperparameter": "pseudo_count",
+      "paper_value": 0.0,
+      "candidates": [
+        {
+          "value": 0.0,
+          "mean_validation_nll_bits_per_site": 1.9844025875127318,
+          "observed_mean_validation_nll_bits_per_site": 1.9844025875127318,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 1.9844064333949853,
+          "observed_mean_validation_nll_bits_per_site": 1.9844064333949853,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.9846271230789858,
+          "observed_mean_validation_nll_bits_per_site": 1.9846271230789858,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.0,
+        0.001,
+        0.01
+      ],
+      "selected": 0.0
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "hmm_gradient",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 1.9895506862449546,
+          "observed_mean_validation_nll_bits_per_site": 1.9895506862449546,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 1.9875837291364138,
+          "observed_mean_validation_nll_bits_per_site": 1.9875837291364138,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.9857424636846968,
+          "observed_mean_validation_nll_bits_per_site": 1.9857424636846968,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 1.9848254297017982,
+          "observed_mean_validation_nll_bits_per_site": 1.9848254297017982,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.03
+      ],
+      "selected": 0.01
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "kgram_counting",
+      "order": 1,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.989139957044573,
+          "observed_mean_validation_nll_bits_per_site": 1.989139957044573,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 1.9891404558827,
+          "observed_mean_validation_nll_bits_per_site": 1.9891404558827,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 1.9891426731096966,
+          "observed_mean_validation_nll_bits_per_site": 1.9891426731096966,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 1.9891454450268624,
+          "observed_mean_validation_nll_bits_per_site": 1.9891454450268624,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "kgram_counting",
+      "order": 2,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.985360752595407,
+          "observed_mean_validation_nll_bits_per_site": 1.985360752595407,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 1.9853483646612995,
+          "observed_mean_validation_nll_bits_per_site": 1.9853483646612995,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 1.9852970777088348,
+          "observed_mean_validation_nll_bits_per_site": 1.9852970777088348,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 1.9852407494390925,
+          "observed_mean_validation_nll_bits_per_site": 1.9852407494390925,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "promoter_gene_sequences",
+      "config_variant": "_val",
+      "arm": "promoter_gene_sequences",
+      "model": "kgram_counting",
+      "order": 3,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 1.990820514229257,
+          "observed_mean_validation_nll_bits_per_site": 1.990820514229257,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 1.9906983566424288,
+          "observed_mean_validation_nll_bits_per_site": 1.9906983566424288,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 1.9902560032239498,
+          "observed_mean_validation_nll_bits_per_site": 1.9902560032239498,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 1.989844126441486,
+          "observed_mean_validation_nll_bits_per_site": 1.989844126441486,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "basis_enhanced",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.8063877570712281,
+          "observed_mean_validation_nll_bits_per_site": 0.8063877570712281,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.790672761372051,
+          "observed_mean_validation_nll_bits_per_site": 0.790672761372051,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7828700530517794,
+          "observed_mean_validation_nll_bits_per_site": 0.7828700530517794,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.7789004122055592,
+          "observed_mean_validation_nll_bits_per_site": 0.7789004122055592,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "basis_enhanced_real",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.7990610114032228,
+          "observed_mean_validation_nll_bits_per_site": 0.7990610114032228,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.7837864663429708,
+          "observed_mean_validation_nll_bits_per_site": 0.7837864663429708,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7738512099305962,
+          "observed_mean_validation_nll_bits_per_site": 0.7738512099305962,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.7804771302011179,
+          "observed_mean_validation_nll_bits_per_site": 0.7804771302011179,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01
+      ],
+      "selected": 0.01
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "hmm_baum_welch",
+      "order": null,
+      "hyperparameter": "pseudo_count",
+      "paper_value": 0.0,
+      "candidates": [
+        {
+          "value": 0.0,
+          "mean_validation_nll_bits_per_site": 0.7852250809579118,
+          "observed_mean_validation_nll_bits_per_site": 0.7852250809579118,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.7845990839240412,
+          "observed_mean_validation_nll_bits_per_site": 0.7845990839240412,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7823756366987167,
+          "observed_mean_validation_nll_bits_per_site": 0.7823756366987167,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01
+      ],
+      "selected": 0.01
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "hmm_gradient",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.8816147094864318,
+          "observed_mean_validation_nll_bits_per_site": 0.8816147094864318,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.853583489939589,
+          "observed_mean_validation_nll_bits_per_site": 0.853583489939589,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.8371282455022769,
+          "observed_mean_validation_nll_bits_per_site": 0.8371282455022769,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.8056157412196875,
+          "observed_mean_validation_nll_bits_per_site": 0.8056157412196875,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "kgram_counting",
+      "order": 1,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.9340778105332588,
+          "observed_mean_validation_nll_bits_per_site": 0.9340778105332588,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.9340764185087573,
+          "observed_mean_validation_nll_bits_per_site": 0.9340764185087573,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.9340702394896487,
+          "observed_mean_validation_nll_bits_per_site": 0.9340702394896487,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.9340625335053974,
+          "observed_mean_validation_nll_bits_per_site": 0.9340625335053974,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "kgram_counting",
+      "order": 2,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.8476025337851721,
+          "observed_mean_validation_nll_bits_per_site": 0.8476025337851721,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.8476061193220373,
+          "observed_mean_validation_nll_bits_per_site": 0.8476061193220373,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.8476223737609887,
+          "observed_mean_validation_nll_bits_per_site": 0.8476223737609887,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.8476433972556746,
+          "observed_mean_validation_nll_bits_per_site": 0.8476433972556746,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_pooled_val",
+      "arm": "spect_heart_pooled",
+      "model": "kgram_counting",
+      "order": 3,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.8489183905774348,
+          "observed_mean_validation_nll_bits_per_site": 0.8489183905774348,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.8489308576458349,
+          "observed_mean_validation_nll_bits_per_site": 0.8489308576458349,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.848986328120057,
+          "observed_mean_validation_nll_bits_per_site": 0.848986328120057,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.8490557219533036,
+          "observed_mean_validation_nll_bits_per_site": 0.8490557219533036,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "basis_enhanced",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.7295970651348279,
+          "observed_mean_validation_nll_bits_per_site": 0.7295970651348279,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.7109275094038267,
+          "observed_mean_validation_nll_bits_per_site": 0.7109275094038267,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7051137216004693,
+          "observed_mean_validation_nll_bits_per_site": 0.7051137216004693,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.7035373249658634,
+          "observed_mean_validation_nll_bits_per_site": 0.7035373249658634,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "basis_enhanced_real",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.7269129811054409,
+          "observed_mean_validation_nll_bits_per_site": 0.7269129811054409,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.7115403444213945,
+          "observed_mean_validation_nll_bits_per_site": 0.7115403444213945,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7069968504763877,
+          "observed_mean_validation_nll_bits_per_site": 0.7069968504763877,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.6967205485940056,
+          "observed_mean_validation_nll_bits_per_site": 0.6967205485940056,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "hmm_baum_welch",
+      "order": null,
+      "hyperparameter": "pseudo_count",
+      "paper_value": 0.0,
+      "candidates": [
+        {
+          "value": 0.0,
+          "mean_validation_nll_bits_per_site": 0.7117107296813813,
+          "observed_mean_validation_nll_bits_per_site": 0.7117107296813813,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.7113578924791669,
+          "observed_mean_validation_nll_bits_per_site": 0.7113578924791669,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7077110164121073,
+          "observed_mean_validation_nll_bits_per_site": 0.7077110164121073,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01
+      ],
+      "selected": 0.01
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "hmm_gradient",
+      "order": null,
+      "hyperparameter": "lr",
+      "paper_value": 0.01,
+      "candidates": [
+        {
+          "value": 0.001,
+          "mean_validation_nll_bits_per_site": 0.7914721747368364,
+          "observed_mean_validation_nll_bits_per_site": 0.7914721747368364,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.003,
+          "mean_validation_nll_bits_per_site": 0.7749864113608858,
+          "observed_mean_validation_nll_bits_per_site": 0.7749864113608858,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7523127686094953,
+          "observed_mean_validation_nll_bits_per_site": 0.7523127686094953,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        },
+        {
+          "value": 0.03,
+          "mean_validation_nll_bits_per_site": 0.7270696529630672,
+          "observed_mean_validation_nll_bits_per_site": 0.7270696529630672,
+          "runs": 9,
+          "planned_runs": 9,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.03
+      ],
+      "selected": 0.03
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "kgram_counting",
+      "order": 1,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.798701687877295,
+          "observed_mean_validation_nll_bits_per_site": 0.798701687877295,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.7986983966699478,
+          "observed_mean_validation_nll_bits_per_site": 0.7986983966699478,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.7986838904903142,
+          "observed_mean_validation_nll_bits_per_site": 0.7986838904903142,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.7986660355981297,
+          "observed_mean_validation_nll_bits_per_site": 0.7986660355981297,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "kgram_counting",
+      "order": 2,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7635028148786959,
+          "observed_mean_validation_nll_bits_per_site": 0.7635028148786959,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.7634967955316517,
+          "observed_mean_validation_nll_bits_per_site": 0.7634967955316517,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.7634704680597096,
+          "observed_mean_validation_nll_bits_per_site": 0.7634704680597096,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.7634385247809962,
+          "observed_mean_validation_nll_bits_per_site": 0.7634385247809962,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    },
+    {
+      "dataset": "spect_heart",
+      "config_variant": "_val",
+      "arm": "spect_heart",
+      "model": "kgram_counting",
+      "order": 3,
+      "hyperparameter": "smoothing",
+      "paper_value": 0.5,
+      "candidates": [
+        {
+          "value": 0.01,
+          "mean_validation_nll_bits_per_site": 0.7633890180442379,
+          "observed_mean_validation_nll_bits_per_site": 0.7633890180442379,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.1,
+          "mean_validation_nll_bits_per_site": 0.7634012157727031,
+          "observed_mean_validation_nll_bits_per_site": 0.7634012157727031,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 0.5,
+          "mean_validation_nll_bits_per_site": 0.763453381193845,
+          "observed_mean_validation_nll_bits_per_site": 0.763453381193845,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        },
+        {
+          "value": 1.0,
+          "mean_validation_nll_bits_per_site": 0.7635142938484999,
+          "observed_mean_validation_nll_bits_per_site": 0.7635142938484999,
+          "runs": 1,
+          "planned_runs": 1,
+          "eligible": true
+        }
+      ],
+      "tied_values": [
+        0.01,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "selected": 0.5
+    }
+  ],
+  "generated_by": "utils/select_hyperparameters.py"
+}

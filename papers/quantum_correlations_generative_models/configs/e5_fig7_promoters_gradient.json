@@ -1,0 +1,24 @@
+{
+  "description": "Phase 5 control B2 (paper protocol, arm A): translation-invariant HMM trained by minibatch SGD with momentum 0.5 on softmax logits, same split, epochs and minibatch as e5_fig7_promoters_original.json, final-epoch checkpoint. The lr here is the paper alpha; the finals sweep passes the lr selected for B2 on validation in arm B (utils/select_hyperparameters.py).",
+  "experiment": "sequence_model",
+  "dataset": {
+    "name": "promoter_gene_sequences",
+    "split_seed": 0,
+    "test_fraction": 0.25,
+    "validation_fraction": 0.0,
+    "batch_size": 8
+  },
+  "model": {
+    "kind": "hmm_gradient",
+    "bond_dim": 2,
+    "field": "real"
+  },
+  "training": {
+    "epochs": 150,
+    "lr": 0.01,
+    "momentum": 0.5,
+    "em_iterations": 0,
+    "em_tolerance": 0.0,
+    "pseudo_count": 0.0
+  }
+}
