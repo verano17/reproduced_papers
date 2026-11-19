@@ -1,0 +1,65 @@
+{
+  "description": "Bandwidth diagnostic (characterization, not the paper's setting): as table1_exact_features_lbfgs but inputs multiplied by 2.5 before encoding, widening the circuit features' frequency range; tests whether the Matern32 prediction gap comes from the paper's encoding range.",
+  "experiment": {
+    "task": "gp_mkl",
+    "name": "table1_exact_features_lbfgs_x2p5"
+  },
+  "data": {
+    "num_points": 500,
+    "seed": 12345,
+    "query_kernels": [
+      {
+        "name": "rbf",
+        "type": "rbf",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "matern32",
+        "type": "matern32",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "nonstat_ls",
+        "type": "nonstat_ls",
+        "params": {
+          "ell_min": 0.1,
+          "ell_max": 0.8,
+          "c": 2.0,
+          "sigmoid_sign": 1
+        }
+      }
+    ]
+  },
+  "circuit": {
+    "num_draws": 128,
+    "sobol_seed": 12345,
+    "input_scale": 2.5
+  },
+  "features": {
+    "backend": "qubit_statevector",
+    "mode": "exact",
+    "num_snapshots": null,
+    "num_groups": null,
+    "seed": 123
+  },
+  "mkl": {
+    "gradient": "exact",
+    "max_iterations": 2000,
+    "tolerance": 1e-06,
+    "coordinate_rounds": 3,
+    "initial_noise_variance": 1.0,
+    "fit_noise_variance": true,
+    "approx_rank": null,
+    "hutchinson_probes": null,
+    "approx_seed": null,
+    "optimizer": "lbfgs",
+    "noise_coupling": "per_kernel"
+  },
+  "evaluation": {
+    "save_features": true
+  }
+}

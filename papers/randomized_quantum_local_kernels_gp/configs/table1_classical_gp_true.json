@@ -1,0 +1,48 @@
+{
+  "description": "Phase 5 baseline B1 (classical oracle reference): GP with each query kernel's true family x amplitude, all hyperparameters and noise fitted by ML-II (L-BFGS-B, 10 log-uniform restarts).",
+  "experiment": {
+    "task": "gp_parametric",
+    "name": "table1_classical_gp_true"
+  },
+  "data": {
+    "num_points": 500,
+    "seed": 12345,
+    "query_kernels": [
+      {
+        "name": "rbf",
+        "type": "rbf",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "matern32",
+        "type": "matern32",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "nonstat_ls",
+        "type": "nonstat_ls",
+        "params": {
+          "ell_min": 0.1,
+          "ell_max": 0.8,
+          "c": 2.0,
+          "sigmoid_sign": 1
+        }
+      }
+    ]
+  },
+  "circuit": {
+    "num_draws": 128,
+    "sobol_seed": 12345
+  },
+  "parametric": {
+    "family": "true",
+    "restarts": 10
+  },
+  "evaluation": {
+    "save_features": false
+  }
+}

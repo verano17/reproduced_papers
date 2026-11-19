@@ -1,0 +1,17 @@
+# Core reproduction (NumPy statevector simulation, exact GP, MKL)
+numpy>=2.0
+scipy>=1.11
+matplotlib>=3.8
+# Imported by the shared runtime (runtime_lib/runtime.py) and used for the
+# Phase 4 photonic adaptation
+merlinquantum>=0.4.1
+perceval-quandela>=1.2
+torch>=2.2
+# Tests (qiskit is the independent reference for the circuit simulator)
+pytest>=8
+qiskit>=2.2
+# Walkthrough notebook (notebook.ipynb; qiskit above is also used there)
+pandas>=2.2
+jupyter>=1.0
+nbconvert>=7.0
+ipykernel>=6.0

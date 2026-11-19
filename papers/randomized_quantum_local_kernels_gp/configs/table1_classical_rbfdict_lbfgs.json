@@ -1,0 +1,71 @@
+{
+  "description": "Phase 5 fair baseline B4 with the converged L-BFGS-B MKL optimizer; pairs with S6 and M2.",
+  "experiment": {
+    "task": "gp_mkl",
+    "name": "table1_classical_rbfdict_lbfgs"
+  },
+  "data": {
+    "num_points": 500,
+    "seed": 12345,
+    "query_kernels": [
+      {
+        "name": "rbf",
+        "type": "rbf",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "matern32",
+        "type": "matern32",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "nonstat_ls",
+        "type": "nonstat_ls",
+        "params": {
+          "ell_min": 0.1,
+          "ell_max": 0.8,
+          "c": 2.0,
+          "sigmoid_sign": 1
+        }
+      }
+    ]
+  },
+  "circuit": {
+    "num_draws": 128,
+    "sobol_seed": 12345
+  },
+  "features": {
+    "backend": "rbf_dictionary",
+    "mode": "exact",
+    "num_snapshots": null,
+    "num_groups": null,
+    "seed": null
+  },
+  "mkl": {
+    "gradient": "exact",
+    "max_iterations": 2000,
+    "tolerance": 1e-06,
+    "coordinate_rounds": 3,
+    "initial_noise_variance": 1.0,
+    "fit_noise_variance": true,
+    "approx_rank": null,
+    "hutchinson_probes": null,
+    "approx_seed": null,
+    "optimizer": "lbfgs",
+    "noise_coupling": "per_kernel"
+  },
+  "evaluation": {
+    "save_features": true
+  },
+  "classical": {
+    "num_features": 24,
+    "lengthscale_range": [
+      0.02,
+      2.0
+    ]
+  }
+}

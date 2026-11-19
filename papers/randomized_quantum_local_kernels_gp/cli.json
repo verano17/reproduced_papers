@@ -1,0 +1,221 @@
+{
+  "description": "Learning Gaussian Processes with Randomized Quantum Local Kernels (QCNC 2026, DOI 10.1109/QCNC69040.2026.00108) reproduction runner",
+  "arguments": [
+    {
+      "flags": [
+        "--task"
+      ],
+      "help": "Experiment task: gp_mkl (mixture of dictionary kernels) or gp_parametric (Phase 5 ML-II GP baselines)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "gp_mkl",
+        "gp_parametric"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "experiment.task"
+      }
+    },
+    {
+      "flags": [
+        "--feature-mode"
+      ],
+      "help": "Feature estimator: exact, code_gaussian, pauli_shadow (qubit backend) or photon_sampled (photonic backend)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "exact",
+        "code_gaussian",
+        "pauli_shadow",
+        "photon_sampled"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "features.mode"
+      }
+    },
+    {
+      "flags": [
+        "--num-snapshots"
+      ],
+      "help": "Snapshots N per (draw, input) for the noisy feature modes",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "features.num_snapshots"
+      }
+    },
+    {
+      "flags": [
+        "--feature-seed"
+      ],
+      "help": "Seed of the shot-noise / shadow sampling",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "features.seed"
+      }
+    },
+    {
+      "flags": [
+        "--num-draws"
+      ],
+      "help": "Number R of Sobol circuit draws (base kernels)",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "circuit.num_draws"
+      }
+    },
+    {
+      "flags": [
+        "--sobol-seed"
+      ],
+      "help": "Scrambling seed of the Sobol sequence",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "circuit.sobol_seed"
+      }
+    },
+    {
+      "flags": [
+        "--data-seed"
+      ],
+      "help": "Seed of the synthetic GP data",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "data.seed"
+      }
+    },
+    {
+      "flags": [
+        "--gradient"
+      ],
+      "help": "MKL gradient: exact or lowrank_hutchinson (authors' approximation)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "exact",
+        "lowrank_hutchinson"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "mkl.gradient"
+      }
+    },
+    {
+      "flags": [
+        "--max-iterations"
+      ],
+      "help": "Logit-ascent iterations per coordinate round",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "mkl.max_iterations"
+      }
+    },
+    {
+      "flags": [
+        "--optimizer"
+      ],
+      "help": "MKL optimizer: authors_protocol (paper's code) or lbfgs (converged reference)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "authors_protocol",
+        "lbfgs"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "mkl.optimizer"
+      }
+    },
+    {
+      "flags": [
+        "--noise-coupling"
+      ],
+      "help": "per_kernel or authors_shared (the authors' shared-noise quirk)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "per_kernel",
+        "authors_shared"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "mkl.noise_coupling"
+      }
+    },
+    {
+      "flags": [
+        "--feature-backend"
+      ],
+      "help": "Dictionary generator: qubit_statevector (paper), merlin_photonic (Phase 4 adaptation), classical_rff or rbf_dictionary (Phase 5 baselines)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "qubit_statevector",
+        "merlin_photonic",
+        "classical_rff",
+        "rbf_dictionary"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "features.backend"
+      }
+    },
+    {
+      "flags": [
+        "--detector"
+      ],
+      "help": "Photonic detector model: threshold (UNBUNCHED, n-click postselection) or pnr (FOCK)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "threshold",
+        "pnr"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "photonic.detector"
+      }
+    },
+    {
+      "flags": [
+        "--initial-mixing"
+      ],
+      "help": "Photonic adaptation: none (Phase 4 version) or balanced_brickwork (fixed 50:50 brickwork before the first data layer)",
+      "type": "str",
+      "default": null,
+      "choices": [
+        "none",
+        "balanced_brickwork"
+      ],
+      "apply": {
+        "kind": "config_path",
+        "path": "photonic.initial_mixing"
+      }
+    },
+    {
+      "flags": [
+        "--input-scale"
+      ],
+      "help": "Multiply inputs by this factor before qubit encoding (1.0 = paper)",
+      "type": "float",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "circuit.input_scale"
+      }
+    }
+  ]
+}

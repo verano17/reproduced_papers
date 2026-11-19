@@ -1,0 +1,64 @@
+{
+  "description": "Qubit dictionary with exact (shot-noise-free) features and the converged L-BFGS-B MKL optimizer; isolates the cost of 10 000-shot estimation (pairs with S6 and C2).",
+  "experiment": {
+    "task": "gp_mkl",
+    "name": "table1_exact_features_lbfgs"
+  },
+  "data": {
+    "num_points": 500,
+    "seed": 12345,
+    "query_kernels": [
+      {
+        "name": "rbf",
+        "type": "rbf",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "matern32",
+        "type": "matern32",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "nonstat_ls",
+        "type": "nonstat_ls",
+        "params": {
+          "ell_min": 0.1,
+          "ell_max": 0.8,
+          "c": 2.0,
+          "sigmoid_sign": 1
+        }
+      }
+    ]
+  },
+  "circuit": {
+    "num_draws": 128,
+    "sobol_seed": 12345
+  },
+  "features": {
+    "backend": "qubit_statevector",
+    "mode": "exact",
+    "num_snapshots": null,
+    "num_groups": null,
+    "seed": 123
+  },
+  "mkl": {
+    "gradient": "exact",
+    "max_iterations": 2000,
+    "tolerance": 1e-06,
+    "coordinate_rounds": 3,
+    "initial_noise_variance": 1.0,
+    "fit_noise_variance": true,
+    "approx_rank": null,
+    "hutchinson_probes": null,
+    "approx_seed": null,
+    "optimizer": "lbfgs",
+    "noise_coupling": "per_kernel"
+  },
+  "evaluation": {
+    "save_features": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "description": "Table I pipeline (code data settings, code noise model, same features and seeds as table1_original) with a converged optimizer not in the paper: L-BFGS-B on softmax logits and log noise variance jointly, exact gradient, from uniform weights and noise 1.0, up to 2000 iterations.",
+  "experiment": {
+    "task": "gp_mkl",
+    "name": "table1_lbfgs"
+  },
+  "data": {
+    "num_points": 500,
+    "seed": 12345,
+    "query_kernels": [
+      {
+        "name": "rbf",
+        "type": "rbf",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "matern32",
+        "type": "matern32",
+        "params": {
+          "lengthscale": 0.3
+        }
+      },
+      {
+        "name": "nonstat_ls",
+        "type": "nonstat_ls",
+        "params": {
+          "ell_min": 0.1,
+          "ell_max": 0.8,
+          "c": 2.0,
+          "sigmoid_sign": 1
+        }
+      }
+    ]
+  },
+  "circuit": {
+    "num_draws": 128,
+    "sobol_seed": 12345
+  },
+  "features": {
+    "mode": "code_gaussian",
+    "num_snapshots": 10000,
+    "num_groups": null,
+    "seed": 123
+  },
+  "mkl": {
+    "gradient": "exact",
+    "max_iterations": 2000,
+    "tolerance": 1e-06,
+    "coordinate_rounds": 3,
+    "initial_noise_variance": 1.0,
+    "fit_noise_variance": true,
+    "approx_rank": null,
+    "hutchinson_probes": null,
+    "approx_seed": null,
+    "optimizer": "lbfgs",
+    "noise_coupling": "per_kernel"
+  },
+  "evaluation": {
+    "save_features": true
+  }
+}
